@@ -2,7 +2,7 @@
 # analysis.py -- to analyze the warts file 
 # OUTPUT:
 #	link_file:1.in 2.out 3.is_dest 4.star 5.delay 6.freq 7.ttl 8.monitor
-#	4. the number of anonymous (*) hops inbetween, e.g., 0 for directed link
+#	    4. the number of anonymous (*) hops inbetween, e.g., 0 for directed link
 #       5. the minimal delay in ms > 0, e.g., 10
 #       6. the cumulative frequence of link observed, e.g., 5000
 #       7. the minimal TTL of the ingress interface, e.g., 7
@@ -135,6 +135,7 @@ END
 }
 
 # generate 
+# replace:cat $prefix.links | cut -d " " -f 1-2 | tr " " "\n"| sort | uniq > $prefix.nodes
 link2node(){
 test $# -lt 1 && echo 'link2node $prefix.links' && exit
 

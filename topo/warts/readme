@@ -1,3 +1,3 @@
 generate links is diffirent:
 1.sc_warts2text *.warts| perl trace2link.pl -p $prefix - > $prefix.links 
-2,cd rev3/analyze/ && ./decode -t caida -f ../../result_file/${trace_file} | python trace2link.py > ../../link_file/${link_file}
+2.cd rev3/analyze/ && ./decode -t caida -f ../../result_file/${trace_file} | python trace2link.py > ../../link_file/${link_file}
